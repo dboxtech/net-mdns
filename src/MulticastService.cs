@@ -9,7 +9,6 @@ using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Threading;
 using System.Threading.Tasks;
-using Common.Logging;
 
 namespace Makaretu.Dns
 {
@@ -32,7 +31,6 @@ namespace Makaretu.Dns
         const int maxDatagramSize = Message.MaxLength;
 
         static readonly TimeSpan maxLegacyUnicastTTL = TimeSpan.FromSeconds(10);
-        static readonly ILog log = LogManager.GetLogger(typeof(MulticastService));
 
         List<NetworkInterface> knownNics = new List<NetworkInterface>();
         int maxPacketSize;
@@ -276,8 +274,6 @@ namespace Makaretu.Dns
 
         void FindNetworkInterfaces()
         {
-            log.Debug("Finding network interfaces");
-
             try
             {
                 var currentNics = GetNetworkInterfaces().ToList();
@@ -288,21 +284,11 @@ namespace Makaretu.Dns
                 foreach (var nic in knownNics.Where(k => !currentNics.Any(n => k.Id == n.Id)))
                 {
                     oldNics.Add(nic);
-
-                    if (log.IsDebugEnabled)
-                    {
-                        log.Debug($"Removed nic '{nic.Name}'.");
-                    }
                 }
 
                 foreach (var nic in currentNics.Where(nic => !knownNics.Any(k => k.Id == nic.Id)))
                 {
                     newNics.Add(nic);
-
-                    if (log.IsDebugEnabled)
-                    {
-                        log.Debug($"Found nic '{nic.Name}'.");
-                    }
                 }
 
                 knownNics = currentNics;
@@ -343,7 +329,7 @@ namespace Makaretu.Dns
             }
             catch (Exception e)
             {
-                log.Error("FindNics failed", e);
+                
             }
         }
 
@@ -652,7 +638,6 @@ namespace Makaretu.Dns
             }
             catch (Exception e)
             {
-                log.Warn("Received malformed message", e);
                 MalformedMessage?.Invoke(this, result.Buffer);
                 return; // eat the exception
             }
@@ -676,7 +661,6 @@ namespace Makaretu.Dns
             }
             catch (Exception e)
             {
-                log.Error("Receive handler failed", e);
                 // eat the exception
             }
         }
