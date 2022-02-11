@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard14;netstandard2;net461</TargetFrameworks>
+    <TargetFrameworks>netstandard2.1</TargetFrameworks>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <AssemblyName>Makaretu.Dns.Multicast</AssemblyName>
     <RootNamespace>Makaretu.Dns</RootNamespace>
@@ -26,16 +26,8 @@
     <PackageProjectUrl>https://github.com/richardschneider/net-mdns</PackageProjectUrl>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard14'">
-    <DefineConstants>NETSTANDARD14</DefineConstants>
-  </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Makaretu.Dns" Version="2.0.1" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard14'">
-    <PackageReference Include="System.Net.NetworkInformation" Version="4.3.0" />   
   </ItemGroup>
 
 </Project>

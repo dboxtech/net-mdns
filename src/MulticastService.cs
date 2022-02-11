@@ -317,15 +317,8 @@ namespace Makaretu.Dns
                 // so no event). Rebinding fixes this.
                 //
                 // Do magic only on Windows.
-#if NET461
-                if (Environment.OSVersion.Platform.ToString().StartsWith("Win"))
-#else
-                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-#endif
-                {
-                    NetworkChange.NetworkAddressChanged -= OnNetworkAddressChanged;
-                    NetworkChange.NetworkAddressChanged += OnNetworkAddressChanged;
-                }
+                NetworkChange.NetworkAddressChanged -= OnNetworkAddressChanged;
+                NetworkChange.NetworkAddressChanged += OnNetworkAddressChanged;
             }
             catch (Exception e)
             {
