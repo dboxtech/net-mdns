@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.1</TargetFrameworks>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <AssemblyName>Makaretu.Dns.Multicast</AssemblyName>
-    <RootNamespace>Makaretu.Dns</RootNamespace>
+    <AssemblyName>dbox.Makaretu.Dns.Multicast</AssemblyName>
+    <RootNamespace>dbox.Makaretu.Dns</RootNamespace>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     <DebugType>full</DebugType>
     <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
