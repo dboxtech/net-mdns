@@ -1,18 +1,18 @@
-﻿using System;
+﻿using Makaretu.Dns;
+using Makaretu.Dns.Resolving;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Makaretu.Dns;
-using Makaretu.Dns.Resolving;
 
 namespace dbox.Makaretu.Dns
 {
-    /// <summary>
-    ///   DNS based Service Discovery is a way of using standard DNS programming interfaces, servers, 
-    ///   and packet formats to browse the network for services.
-    /// </summary>
-    /// <seealso href="https://tools.ietf.org/html/rfc6763">RFC 6763 DNS-Based Service Discovery</seealso>
-    public class ServiceDiscovery : IDisposable
+	/// <summary>
+	///   DNS based Service Discovery is a way of using standard DNS programming interfaces, servers, 
+	///   and packet formats to browse the network for services.
+	/// </summary>
+	/// <seealso href="https://tools.ietf.org/html/rfc6763">RFC 6763 DNS-Based Service Discovery</seealso>
+	public class ServiceDiscovery : IDisposable
     {
         static readonly DomainName LocalDomain = new DomainName("local");
         static readonly DomainName SubName = new DomainName("_sub");

@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
 
 namespace dbox.Makaretu.Dns
 {
-    /// <summary>
-    ///   Maintains a sequence of recent messages.
-    /// </summary>
-    /// <remarks>
-    ///   <b>RecentMessages</b> is used to determine if a message has already been
-    ///   processed within the specified <see cref="Interval"/>.
-    /// </remarks>
-    public class RecentMessages
+	/// <summary>
+	///   Maintains a sequence of recent messages.
+	/// </summary>
+	/// <remarks>
+	///   <b>RecentMessages</b> is used to determine if a message has already been
+	///   processed within the specified <see cref="Interval"/>.
+	/// </remarks>
+	public class RecentMessages
     {
         /// <summary>
         ///   Recent messages.

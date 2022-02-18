@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace dbox.Makaretu
 {
-    /// <summary>
-    ///   Asserting an <see cref="Exception"/>.
-    /// </summary>
-    public static class ExceptionAssert
+	/// <summary>
+	///   Asserting an <see cref="Exception"/>.
+	/// </summary>
+	public static class ExceptionAssert
     {
 
         public static T Throws<T>(Action action, string expectedMessage = null) where T : Exception

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Makaretu.Dns;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -6,13 +8,11 @@ using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
-using Makaretu.Dns;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace dbox.Makaretu.Dns
 {
 
-    [TestClass]
+	[TestClass]
     public class MulticastServiceTest
     {
         [TestMethod]

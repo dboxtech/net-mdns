@@ -1,18 +1,15 @@
 ﻿using Makaretu.Dns;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Net.Sockets;
-using System.Text;
 
 namespace dbox.Makaretu.Dns
 {
-    /// <summary>
-    ///   Defines a specific service that can be discovered.
-    /// </summary>
-    /// <seealso cref="ServiceDiscovery.Advertise(ServiceProfile)"/>
-    public class ServiceProfile
+	/// <summary>
+	///   Defines a specific service that can be discovered.
+	/// </summary>
+	/// <seealso cref="ServiceDiscovery.Advertise(ServiceProfile)"/>
+	public class ServiceProfile
     {
         // Enforce multicast defaults, especially TTL.
         static ServiceProfile()

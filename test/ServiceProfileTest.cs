@@ -1,19 +1,13 @@
-﻿using dbox.Makaretu.Dns;
-using Makaretu.Dns;
+﻿using Makaretu.Dns;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Net.NetworkInformation;
-using System.Net.Sockets;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace dbox.Makaretu.Dns
 {
-    
-    [TestClass]
+
+	[TestClass]
     public class ServiveProfileTest
     {
         [TestMethod]

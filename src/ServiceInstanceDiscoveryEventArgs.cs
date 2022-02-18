@@ -1,15 +1,11 @@
-﻿using dbox.Makaretu.Dns;
-using Makaretu.Dns;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Makaretu.Dns;
 
 namespace dbox.Makaretu.Dns
 {
-    /// <summary>
-    ///   The event data for <see cref="ServiceDiscovery.ServiceInstanceDiscovered"/>.
-    /// </summary>
-    public class ServiceInstanceDiscoveryEventArgs : MessageEventArgs
+	/// <summary>
+	///   The event data for <see cref="ServiceDiscovery.ServiceInstanceDiscovered"/>.
+	/// </summary>
+	public class ServiceInstanceDiscoveryEventArgs : MessageEventArgs
     {
         /// <summary>
         ///   The fully qualified name of the service instance.
