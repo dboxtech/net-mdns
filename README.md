@@ -41,7 +41,7 @@ or using .NET CLI run the following command in the project folder
 Always broadcast the service ("foo") running on local host with port 1024.
 
 ```csharp
-using Makaretu.Dns;
+using dbox.Makaretu.Dns;
 
 var service = new ServiceProfile("x", "_foo._tcp", 1024);
 var sd = new ServiceDiscovery();
@@ -55,7 +55,7 @@ See the [example advertiser](Spike/Program.cs) for a working program.
 Find all services running on the local link.
 
 ```csharp
-using Makaretu.Dns;
+using dbox.Makaretu.Dns;
 
 var sd = new ServiceDiscovery();
 sd.ServiceDiscovered += (s, serviceName) => { // Do something };
@@ -64,7 +64,7 @@ sd.ServiceDiscovered += (s, serviceName) => { // Do something };
 Find all service instances running on the local link.
 
 ```csharp
-using Makaretu.Dns;
+using dbox.Makaretu.Dns;
 
 var sd = new ServiceDiscovery();
 sd.ServiceInstanceDiscovered += (s, e) => { // Do something };
@@ -81,7 +81,7 @@ The `AnsweredReceived` callback contains any answer that is seen, not just the a
 to the specific query.
 
 ```csharp
-using Makaretu.Dns;
+using dbox.Makaretu.Dns;
 
 var mdns = new MulticastService();
 mdns.NetworkInterfaceDiscovered += (s, e) => mdns.SendQuery("appletv.local");
@@ -94,6 +94,7 @@ mdns.Start();
 Get the first answer to Apple TVs. Wait 2 seconds for an answer.
 
 ```csharp
+using dbox.Makaretu.Dns;
 using Makaretu.Dns;
 
 var service = "appletv.local";
@@ -114,6 +115,7 @@ using (var mdns = new MulticastService())
 Respond to a query for the service.  Note that `ServiceDiscovery.Advertise` is much easier.
 
 ```csharp
+using dbox.Makaretu.Dns;
 using Makaretu.Dns;
 
 var service = "...";

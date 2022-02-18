@@ -1,4 +1,4 @@
-﻿using Makaretu.Dns;
+﻿using dbox.Makaretu.Dns;
 using System;
 using System.Linq;
 

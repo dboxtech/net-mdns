@@ -8,7 +8,7 @@ using System.Net.Sockets;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
-namespace Makaretu.Dns
+namespace dbox.Makaretu.Dns
 {
     /// <summary>
     ///   Performs the magic to send and receive datagrams over multicast

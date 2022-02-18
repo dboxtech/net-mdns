@@ -1,3 +1,4 @@
+using dbox.Makaretu.Dns;
 using Makaretu.Dns;
 using System;
 using System.Collections.Generic;

@@ -2,11 +2,11 @@
 using System.Linq;
 using System.Net;
 using System.Threading;
+using Makaretu.Dns;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Makaretu.Dns
+namespace dbox.Makaretu.Dns
 {
-
     [TestClass]
     public class ServiceDiscoveryTest
     {

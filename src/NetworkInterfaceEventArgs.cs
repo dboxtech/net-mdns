@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using System.Text;
 
-namespace Makaretu.Dns
+namespace dbox.Makaretu.Dns
 {
     /// <summary>
     ///   The event data for <see cref="MulticastService.NetworkInterfaceDiscovered"/>.

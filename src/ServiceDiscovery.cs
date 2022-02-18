@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Makaretu.Dns;
 using Makaretu.Dns.Resolving;
 
-namespace Makaretu.Dns
+namespace dbox.Makaretu.Dns
 {
     /// <summary>
     ///   DNS based Service Discovery is a way of using standard DNS programming interfaces, servers, 

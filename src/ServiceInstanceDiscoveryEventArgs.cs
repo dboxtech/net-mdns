@@ -1,9 +1,10 @@
-﻿using Makaretu.Dns;
+﻿using dbox.Makaretu.Dns;
+using Makaretu.Dns;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Makaretu.Dns
+namespace dbox.Makaretu.Dns
 {
     /// <summary>
     ///   The event data for <see cref="ServiceDiscovery.ServiceInstanceDiscovered"/>.

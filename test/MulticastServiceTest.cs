@@ -6,9 +6,10 @@ using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
+using Makaretu.Dns;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Makaretu.Dns
+namespace dbox.Makaretu.Dns
 {
 
     [TestClass]
