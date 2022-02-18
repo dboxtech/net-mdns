@@ -12,7 +12,7 @@ The [ServiceInstanceDiscovered](xref:Makaretu.Dns.ServiceDiscovery.ServiceInstan
 each time a service instance is discovered.
 
 ```csharp
-using Makaretu.Dns;
+using dbox.Makaretu.Dns;
 
 var sd = new ServiceDiscovery();
 sd.ServiceInstanceDiscovered += (s, e) =>
@@ -29,7 +29,7 @@ and then [Advertise](xref:Makaretu.Dns.ServiceDiscovery.Advertise*) it.  Any que
 service instance will be answered with information from the profile.
 
 ```csharp
-using Makaretu.Dns;
+using dbox.Makaretu.Dns;
 
 var profile = new ServiceProfile("x", "_myservice._udp", 1024);
 profile.Subtypes.Add("apiv2");

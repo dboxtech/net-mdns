@@ -5,16 +5,15 @@ using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
-using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
-namespace Makaretu.Dns
+namespace dbox.Makaretu.Dns
 {
-    /// <summary>
-    ///   Performs the magic to send and receive datagrams over multicast
-    ///   sockets.
-    /// </summary>
-    class MulticastClient : IDisposable
+	/// <summary>
+	///   Performs the magic to send and receive datagrams over multicast
+	///   sockets.
+	/// </summary>
+	class MulticastClient : IDisposable
     {
         /// <summary>
         ///   The port number assigned to Multicast DNS.

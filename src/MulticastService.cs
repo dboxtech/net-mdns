@@ -1,30 +1,28 @@
-﻿using System;
-using System.Collections.Concurrent;
+﻿using Makaretu.Dns;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Makaretu.Dns
+namespace dbox.Makaretu.Dns
 {
-    /// <summary>
-    ///   Muticast Domain Name Service.
-    /// </summary>
-    /// <remarks>
-    ///   Sends and receives DNS queries and answers via the multicast mechachism
-    ///   defined in <see href="https://tools.ietf.org/html/rfc6762"/>.
-    ///   <para>
-    ///   Use <see cref="Start"/> to start listening for multicast messages.
-    ///   One of the events, <see cref="QueryReceived"/> or <see cref="AnswerReceived"/>, is
-    ///   raised when a <see cref="Message"/> is received.
-    ///   </para>
-    /// </remarks>
-    public class MulticastService : IResolver, IDisposable
+	/// <summary>
+	///   Muticast Domain Name Service.
+	/// </summary>
+	/// <remarks>
+	///   Sends and receives DNS queries and answers via the multicast mechachism
+	///   defined in <see href="https://tools.ietf.org/html/rfc6762"/>.
+	///   <para>
+	///   Use <see cref="Start"/> to start listening for multicast messages.
+	///   One of the events, <see cref="QueryReceived"/> or <see cref="AnswerReceived"/>, is
+	///   raised when a <see cref="Message"/> is received.
+	///   </para>
+	/// </remarks>
+	public class MulticastService : IResolver, IDisposable
     {
         // IP header (20 bytes for IPv4; 40 bytes for IPv6) and the UDP header(8 bytes).
         const int packetOverhead = 48;

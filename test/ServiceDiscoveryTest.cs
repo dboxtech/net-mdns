@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Makaretu.Dns;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Linq;
 using System.Net;
 using System.Threading;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Makaretu.Dns
+namespace dbox.Makaretu.Dns
 {
-
-    [TestClass]
+	[TestClass]
     public class ServiceDiscoveryTest
     {
         [TestMethod]

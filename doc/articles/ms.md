@@ -13,7 +13,7 @@ are used to send a message.  Note that the sending MulticastService
 will also receive the message.
 
 ```csharp
-using Makaretu.Dns;
+using dbox.Makaretu.Dns;
 
 var mdns = new MulticastService();
 mdns.SendQuery("appletv.local");
@@ -25,7 +25,7 @@ The [QueryReceived](xref:Makaretu.Dns.MulticastService.QueryReceived) or [Answer
 is raised whenever a message is received.
 
 ```csharp
-using Makaretu.Dns;
+using dbox.Makaretu.Dns;
 
 var mdns = new MulticastService();
 mdns.AnswerReceived += (s, e) => 

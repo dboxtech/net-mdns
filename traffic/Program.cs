@@ -1,4 +1,5 @@
-﻿using Makaretu.Dns;
+﻿using dbox.Makaretu.Dns;
+using Makaretu.Dns;
 using System;
 
 namespace traffic

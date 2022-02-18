@@ -1,11 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>net6.0</TargetFrameworks>
 
     <IsPackable>false</IsPackable>
     <DebugType>portable</DebugType>
-    <RootNamespace>Makaretu.Mdns</RootNamespace>
+    <RootNamespace>dbox.Makaretu.Mdns</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup>
